@@ -183,9 +183,9 @@ class PlayList {
         if (start < 0 || start > this.size - 1) {
             return -1;
         }
-        int minIndex = 0;
+        int minIndex = start;
         while (start < this.size) {
-            if(this.tracks[start].getDuration() < minIndex){
+            if(this.tracks[start].getDuration() < this.tracks[minIndex].getDuration()){
                 minIndex = start;
             }
             start++;
